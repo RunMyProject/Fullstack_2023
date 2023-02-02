@@ -1,8 +1,10 @@
 # Explaining the Solution and how it was implemented
 
 ---
-**Architectural Aolution of the project.**
+**Architectural Solution of the project.**
 
-To do...
+The project is composed of two main layers, one in Front-End written in Angular 13 and another in Back-End written in DropWizard.
+
+TO DO
 
 ---
