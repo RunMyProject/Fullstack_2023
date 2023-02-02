@@ -16,6 +16,7 @@ Fullstack Technical Test 2023
 
 -[x] YOUR BROWSER OR AN API PLATFORM
 [This is an external link to see the JAVA Demo](http://localhost:8080/atms-list/fullsearch)
-[This is an external link to see the JAVA Demo](http://localhost:8080/atms-list/searchbyfield?city=Zu)
 
+-[x] YOUR BROWSER OR AN API PLATFORM
+[This is an external link to see the JAVA Demo](http://localhost:8080/atms-list/searchbyfield?city=Zu)
 
