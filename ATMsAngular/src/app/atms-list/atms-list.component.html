@@ -1,0 +1,44 @@
+<searchfield [callbackFunction]='this.myCallbackFunction'></searchfield>
+<div *ngIf="(atms$| async) as list; else loading">
+  <table id="MyDataTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">City</th>
+        <th class="th-sm">Street</th>
+        <th class="th-sm">Housenumber</th>
+        <th class="th-sm">Postalcode</th>
+        <th class="th-sm">Lat</th>
+        <th class="th-sm">Lng</th>
+        <th class="th-sm">Distance</th>
+        <th class="th-sm">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let atm of list">
+        <td>{{ atm.address.city }}</td>
+        <td>{{ atm.address.street }}</td>
+        <td>{{ atm.address.housenumber }}</td>
+        <td>{{ atm.address.postalcode }}</td>
+        <td>{{ atm.address.geoLocation.lat }}</td>
+        <td>{{ atm.address.geoLocation.lng }}</td>
+        <td>{{ atm.distance }}</td>
+        <td>{{ atm.type }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="th-sm">City</th>
+        <th class="th-sm">Street</th>
+        <th class="th-sm">Housenumber</th>
+        <th class="th-sm">Postalcode</th>
+        <th class="th-sm">Lat</th>
+        <th class="th-sm">Lng</th>
+        <th class="th-sm">Distance</th>
+        <th class="th-sm">Type</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<ng-template #loading>
+  <p>No data, waiting for Java Api...</p>
+ </ng-template>
