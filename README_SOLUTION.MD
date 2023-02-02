@@ -22,8 +22,21 @@ Two service APIs have been developed: /fullsearch and /searchbyfield. Only the f
 
 *Angular Front-End*
 
-TO DO
+The TypeScript language is used in the project. 
+The app.module.ts file imports the modules of the form, of the navigation routes, of the HTTP API calls and of the components used at the Front-End level.
 
+Initially a file was developed to hold the configuration constants in a global variable called GlobalConstants in the constants.ts file.
+
+To start designing while the "Back-End Team" is developing the REST API in parallel, a mocked data file called mock-atms-list has been created.
+
+To implement the real-time visualization starting from the data sending of the search box, the "Reactive Programming" typical of Angular has been adopted.
+
+Here are the benefits of writing our templates in this more responsive style:
+
+1. There are no manual component-level subscriptions for observables that leave the service tier;
+2. You don't need to create smaller components to be able to use the asynchronous pipe only once and prevent multiple subscriptions;
+3. no local data state variables are defined at the component level, so problems caused by local component state mutation are less likely to occur;
+4. now we have more declarative code: both the component and the model are very declarative, we are just linking data streams together instead of storing local variables and passing them to the model;
 
 
 ---
