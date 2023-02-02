@@ -38,5 +38,10 @@ Here are the benefits of writing our templates in this more responsive style:
 3. no local data state variables are defined at the component level, so problems caused by local component state mutation are less likely to occur;
 4. now we have more declarative code: both the component and the model are very declarative, we are just linking data streams together instead of storing local variables and passing them to the model;
 
+The atms.service.ts file contains the service to invoke the JAVA REST APIs: getMockResults() for mock data and getSearchResults(fullTextSearch: string) for HTTP search.
+
+The atms-list.component.ts file contains the service HTTP call and result manager component. A callback function is also used to update the data from the lookup field.
+
+Finally, the SearchfieldComponent component takes the callback as input (in this case it is defined as a child component of Angular) and defines an initial default value in the search box to reduce the first call load (City = Amsterdam).
 
 ---
